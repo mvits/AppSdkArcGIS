@@ -1,0 +1,33 @@
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <FrameLayout
+        android:id="@+id/content_vector_layer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.esri.arcgisruntime.mapping.view.MapView
+            android:id="@+id/map_vector_layer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></com.esri.arcgisruntime.mapping.view.MapView>
+    </FrameLayout>
+
+    <ListView
+        android:id="@+id/rigth_drawer"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"
+        android:background="#4f809c"
+        ></ListView>
+
+
+
+</android.support.v4.widget.DrawerLayout>
