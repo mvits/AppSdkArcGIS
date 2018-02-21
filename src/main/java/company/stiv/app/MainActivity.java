@@ -1,5 +1,6 @@
 package company.stiv.app;
 
+import android.content.Intent;
 import android.support.constraint.ConstraintLayout;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -8,8 +9,11 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
 
 import com.esri.arcgisruntime.layers.ArcGISMapImageLayer;
 import com.esri.arcgisruntime.mapping.ArcGISMap;
@@ -109,16 +113,22 @@ public class MainActivity extends AppCompatActivity
                 myMap.setMap(map);
                 break;
             case R.id.exercise_2:
-                ConstraintLayout viewMap= (ConstraintLayout) findViewById(R.id.content);
-                viewMap.removeView(myMap);
+                //ConstraintLayout viewMap= (ConstraintLayout) findViewById(R.id.content);
+                // viewMap.removeView(myMap);
+
+                /** Example Inflated
+                LayoutInflater inflater = (LayoutInflater)this.getSystemService(LAYOUT_INFLATER_SERVICE);
+                View vectorLayerLayout = inflater.inflate(R.layout.vector_layer,(ViewGroup)findViewById(R.id.drawer_layout_map));
+                 viewMap.addView(vectorLayerLayout);**/
+
+                Intent intent =new Intent(this,VectorLayerActivity.class);
+                startActivity(intent);
+
                 break;
 
 
 
         }
-
-
-
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
