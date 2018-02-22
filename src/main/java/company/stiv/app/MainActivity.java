@@ -18,6 +18,7 @@ import android.view.ViewGroup;
 import com.esri.arcgisruntime.layers.ArcGISMapImageLayer;
 import com.esri.arcgisruntime.mapping.ArcGISMap;
 import com.esri.arcgisruntime.mapping.Basemap;
+import com.esri.arcgisruntime.mapping.view.LocationDisplay;
 import com.esri.arcgisruntime.mapping.view.MapView;
 
 
@@ -105,12 +106,15 @@ public class MainActivity extends AppCompatActivity
                 /**Cargar Servicio de Mapa Base**/
                 ArcGISMapImageLayer mapImageLayer= new ArcGISMapImageLayer(getResources().getString(R.string.world_topo_service));
 
+
                 /**Agregar el layer correspondiente del mapa base al map**/
                 map.getOperationalLayers().add(mapImageLayer);
 
                 /**Agregar a la vista del mapa**/
 
                 myMap.setMap(map);
+
+
                 break;
             case R.id.exercise_2:
                 //ConstraintLayout viewMap= (ConstraintLayout) findViewById(R.id.content);
@@ -121,8 +125,15 @@ public class MainActivity extends AppCompatActivity
                 View vectorLayerLayout = inflater.inflate(R.layout.vector_layer,(ViewGroup)findViewById(R.id.drawer_layout_map));
                  viewMap.addView(vectorLayerLayout);**/
 
-                Intent intent =new Intent(this,VectorLayerActivity.class);
-                startActivity(intent);
+                Intent intentVectorLayer =new Intent(this,VectorLayerActivity.class);
+                startActivity(intentVectorLayer);
+
+                break;
+
+            case R.id.exercise_3:
+
+                Intent intentLocation  = new Intent(this, LocationActivity.class);
+                startActivity(intentLocation);
 
                 break;
 

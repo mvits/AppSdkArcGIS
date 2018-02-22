@@ -3,4 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" tools:context=".VectorLayerActivity">
 
+
+    <item
+        android:id="@+id/btnBack"
+        android:onClick="onBack"
+        android:orderInCategory="100"
+        android:title="Volver"
+        app:showAsAction="ifRoom" />
 </menu>

@@ -27,6 +27,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".VectorLayerActivity"
+            android:label="AppGeo">
+        </activity>
+        <activity android:name=".LocationActivity"
+            android:label="AppGeo">
+        </activity>
     </application>
 
 </manifest>

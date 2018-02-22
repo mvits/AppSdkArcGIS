@@ -45,7 +45,7 @@ public class VectorLayerActivity extends AppCompatActivity {
 
         Basemap basemap= new Basemap(TiledLayerMap);
         ArcGISMap map= new ArcGISMap(basemap);
-        Viewpoint viewpoint = new Viewpoint(47.606726, -122.335564, 72223.819286);
+        Viewpoint viewpoint = new Viewpoint(47.606726, -122.335564, 4622324.434309);
         map.setInitialViewpoint(viewpoint);
 
         MapVectorLayer.setMap(map);
@@ -182,4 +182,14 @@ public class VectorLayerActivity extends AppCompatActivity {
         // Activate the navigation drawer toggle
         return (Toggle.onOptionsItemSelected(item)) || super.onOptionsItemSelected(item);
     }
+
+    public void onBack (MenuItem item){
+
+        Intent intent = new Intent(VectorLayerActivity.this,MainActivity.class);
+        setResult(RESULT_OK, intent);
+        finish();
+
+    }
+
+
 }

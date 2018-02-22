@@ -6,7 +6,7 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
-    <string name="world_topo_service">https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer</string>
+    <string name="world_topo_service">http://sampleserver5.arcgisonline.com/arcgis/rest/services/Elevation/WorldElevations/MapServer</string>
 
 
     <string name="usgs_topo_url">https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer</string>
