@@ -26,5 +26,7 @@
     <string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">Close navigation drawer</string>
 
+    <string name="location_permission_denied">LocationDisplayManager no inicia dado que no tiene permisos de Localización</string>
+
 
 </resources>
